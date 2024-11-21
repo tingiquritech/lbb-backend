@@ -95,7 +95,6 @@ let CertificateService = class CertificateService {
         };
     }
     async blockCertificate(id, blockDto) {
-        console.log(blockDto);
         const updatedData = await this.certificateModel
             .findByIdAndUpdate(id, Object.assign({}, blockDto), { new: true })
             .exec();
