@@ -118,7 +118,6 @@ export class CertificateService {
     id: string,
     blockDto: BlockCertificateDto,
   ): Promise<Certificate> {
-    console.log(blockDto)
     const updatedData = await this.certificateModel
       .findByIdAndUpdate(
         id,
